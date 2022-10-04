@@ -14,7 +14,7 @@ namespace CROMA.API.Models
         public string UserName { get; set; }
         [Required]
         public int PhoneNumber { get; set; }
-        
+
         public string Comment { get; set; }
         public int CarId { get; set; }
         public Car Car { get; set; }
