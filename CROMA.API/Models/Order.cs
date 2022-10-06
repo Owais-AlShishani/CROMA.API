@@ -13,7 +13,7 @@ namespace CROMA.API.Models
         [Required]
         public string UserName { get; set; }
         [Required]
-        public int PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; }
 
         public string Comment { get; set; }
         public int CarId { get; set; }

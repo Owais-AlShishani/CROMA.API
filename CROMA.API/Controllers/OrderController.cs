@@ -2,7 +2,6 @@
 using CROMA.API.Repository;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CROMA.API.Controllers
 {
@@ -16,7 +15,7 @@ namespace CROMA.API.Controllers
         {
             this.orderRepository = orderRepository;
         }
-        // GET: api/<OrderController>
+
         [HttpGet]
         public async Task<ActionResult> GetOrders()
         {
@@ -31,7 +30,6 @@ namespace CROMA.API.Controllers
             }
         }
 
-        // GET api/<OrderController>/5
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
@@ -45,7 +43,6 @@ namespace CROMA.API.Controllers
             return result;
         }
 
-        // POST api/<OrderController>
         [HttpPost]
         public async Task<ActionResult<Order>> AddOrder([FromBody] Order order)
         {
@@ -62,11 +59,10 @@ namespace CROMA.API.Controllers
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error creating new Order record");
+                    "Error creating new order record");
             }
         }
 
-        // PUT api/<OrderController>/5
         [HttpPut("{id}")]
         public async Task<ActionResult<Order>> UpdateOrder(int id, [FromBody] Order order)
         {
@@ -91,7 +87,6 @@ namespace CROMA.API.Controllers
             }
         }
 
-        // DELETE api/<OrderController>/5
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteOder(int id)
         {
