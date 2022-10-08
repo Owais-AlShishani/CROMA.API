@@ -4,6 +4,7 @@ using CROMA.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CROMA.API.Migrations
 {
     [DbContext(typeof(CROMA_DbContext))]
-    partial class CROMA_DbContextModelSnapshot : ModelSnapshot
+    [Migration("20221006131126_PhoneNumber data type Changed")]
+    partial class PhoneNumberdatatypeChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
