@@ -4,6 +4,7 @@ using CROMA.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CROMA.API.Migrations
 {
     [DbContext(typeof(CROMA_DbContext))]
-    partial class CROMA_DbContextModelSnapshot : ModelSnapshot
+    [Migration("20221010064804_Seeding Data for Order Table")]
+    partial class SeedingDataforOrderTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,30 +102,10 @@ namespace CROMA.API.Migrations
                             Id = 1,
                             CarId = 1,
                             Comment = "Nice Car",
-                            DateFrom = new DateTime(2022, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateFrom = new DateTime(2022, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateTo = new DateTime(2022, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PhoneNumber = 962776968787L,
                             UserName = "Owais"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CarId = 2,
-                            Comment = "No Comment",
-                            DateFrom = new DateTime(2022, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTo = new DateTime(2022, 10, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PhoneNumber = 962779654107L,
-                            UserName = "Omar"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CarId = 3,
-                            Comment = "No Comment",
-                            DateFrom = new DateTime(2022, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTo = new DateTime(2022, 12, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PhoneNumber = 96277050507L,
-                            UserName = "Ali"
                         });
                 });
 

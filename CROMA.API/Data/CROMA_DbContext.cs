@@ -24,6 +24,38 @@ namespace CROMA.API.Data
                 new Car { Id = 3, CarType = "TOYOTA" });
             modelBuilder.Entity<Car>().HasData(
                 new Car { Id = 4, CarType = "SUBARU" });
+
+
+            modelBuilder.Entity<Order>().HasData(new Order
+            {
+                Id = 1,
+                DateFrom = new DateTime(2022, 10, 09),
+                DateTo = new DateTime(2022, 10, 20),
+                UserName = "Owais",
+                PhoneNumber = 962776968787,
+                Comment = "Nice Car",
+                CarId = 1,
+            });
+            modelBuilder.Entity<Order>().HasData(new Order
+            {
+                Id = 2,
+                DateFrom = new DateTime(2022, 10, 10),
+                DateTo = new DateTime(2022, 10, 30),
+                UserName = "Omar",
+                PhoneNumber = 962779654107,
+                Comment = "No Comment",
+                CarId = 2,
+            });
+            modelBuilder.Entity<Order>().HasData(new Order
+            {
+                Id = 3,
+                DateFrom = new DateTime(2022, 10, 01),
+                DateTo = new DateTime(2022, 12, 20),
+                UserName = "Ali",
+                PhoneNumber = 96277050507,
+                Comment = "No Comment",
+                CarId = 3,
+            });
         }
     }
 }
